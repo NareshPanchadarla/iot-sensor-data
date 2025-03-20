@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+	https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+
+    <!-- Data types for MySQL -->
+    <property name="timestamp.type" dbms="mysql" value="datetime(3)"/>
+    <property name="datetime.type" dbms="mysql" value="datetime"/>
+    <property name="date.type" dbms="mysql" value="date"/>
+    <property name="decimal.type" dbms="mysql" value="DECIMAL(19,2)"/>
+    <property name="double.type" dbms="mysql" value="double"/>
+    <property name="boolean.type" dbms="mysql" value="boolean"/>
+    <property name="blob.type" dbms="mysql" value="longblob"/>
+    <property name="now" dbms="mysql" value="CURRENT_TIMESTAMP()"/>
+
+    <changeSet id="1" author="Naresh Panchadarla">
+        <comment>Create the SensorReading table</comment>
+        <createTable tableName="SensorReading">
+            <column name="Id" autoIncrement="true" type="BIGINT">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_SensorReading"/>
+            </column>
+            <column name="Sensor_Id" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Sensor_Type" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Reading_Value" type="DECIMAL(10,4)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Unit" type="VARCHAR(20)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Reading_At" type="${timestamp.type}">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Created_At" type="${timestamp.type}">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="2" author="Naresh Panchadarla">
+        <comment>Create the sensor_readings table indexes</comment>
+        <createIndex indexName="idx_sensor_readings_sensor_id" tableName="SensorReading">
+            <column name="Sensor_Id"/>
+        </createIndex>
+
+        <!-- Index on sensor_type for filtering by type -->
+        <createIndex indexName="idx_sensor_readings_sensor_type" tableName="SensorReading">
+            <column name="Sensor_Type"/>
+        </createIndex>
+
+        <!-- Index on reading_timestamp for efficient time-range queries -->
+        <createIndex indexName="idx_sensor_readings_reading_timestamp" tableName="SensorReading">
+            <column name="Reading_At"/>
+        </createIndex>
+
+        <!-- Composite index on sensor_id and reading_timestamp for combined filters -->
+        <createIndex indexName="idx_sensor_readings_sensorid_timestamp" tableName="SensorReading">
+            <column name="Sensor_Id"/>
+            <column name="Sensor_Type"/>
+            <column name="Reading_At"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="3" author="Naresh Panchadarla">
+        <comment>Create the user table </comment>
+        <createTable tableName="User">
+            <column name="Id" autoIncrement="true" type="BIGINT">
+                <constraints primaryKey="true" nullable="false" primaryKeyName="pk_user"/>
+            </column>
+            <column name="username" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="VARCHAR(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="4" author="Naresh Panchadarla">
+        <comment>Add unique constraint and index to an email in User table</comment>
+        <addUniqueConstraint
+                tableName="User"
+                columnNames="email"
+                constraintName="unique_email_constraint"/>
+        <createIndex indexName="idx_user_email" tableName="User">
+            <column name="email"/>
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="5" author="Naresh Panchadarla">
+        <sql>
+                INSERT INTO SensorReading (Id, Sensor_Id, Sensor_Type, Reading_Value, Unit, Reading_At, Created_At)
+                VALUES  (1, 'THERMO_001', 'THERMOSTAT', 22.5, '°C', '2025-03-10 08:15:00', NOW()),
+                        (2, 'THERMO_001', 'THERMOSTAT', 23.1, '°C', '2025-03-10 09:45:30', NOW()),
+                        (3, 'THERMO_002', 'THERMOSTAT', 19.8, '°C', '2025-03-10 10:20:15', NOW()),
+                        (4, 'THERMO_003', 'THERMOSTAT', 24.3, '°C', '2025-03-10 11:55:00', NOW()),
+                        (5, 'THERMO_001', 'THERMOSTAT', 21.7, '°C', '2025-03-10 13:30:45', NOW()),
+                        (6, 'THERMO_002', 'THERMOSTAT', 20.2, '°C', '2025-03-10 15:05:30', NOW()),
+                        (7, 'THERMO_003', 'THERMOSTAT', 25.0, '°C', '2025-03-10 16:40:15', NOW()),
+                        (8, 'THERMO_001', 'THERMOSTAT', 22.9, '°C', '2025-03-10 18:15:00', NOW()),
+                        (9, 'HR_001', 'HEART_RATE', 68, 'BPM', '2025-03-10 08:17:30', NOW()),
+                        (10, 'HR_002', 'HEART_RATE', 72, 'BPM', '2025-03-10 09:47:15', NOW()),
+                        (11, 'HR_001', 'HEART_RATE', 75, 'BPM', '2025-03-10 11:22:00', NOW()),
+                        (12, 'HR_003', 'HEART_RATE', 81, 'BPM', '2025-03-10 12:57:45', NOW()),
+                        (13, 'HR_002', 'HEART_RATE', 69, 'BPM', '2025-03-10 14:32:30', NOW()),
+                        (14, 'HR_001', 'HEART_RATE', 77, 'BPM', '2025-03-10 16:07:15', NOW()),
+                        (15, 'FUEL_001', 'CAR_FUEL_LEVEL', 45.2, '%', '2025-03-10 08:20:00', NOW()),
+                        (16, 'FUEL_002', 'CAR_FUEL_LEVEL', 32.8, '%', '2025-03-10 09:50:45', NOW()),
+                        (17, 'FUEL_001', 'CAR_FUEL_LEVEL', 41.7, '%', '2025-03-10 11:25:30', NOW()),
+                        (18, 'FUEL_003', 'CAR_FUEL_LEVEL', 38.4, '%', '2025-03-10 13:00:15', NOW()),
+                        (19, 'FUEL_002', 'CAR_FUEL_LEVEL', 29.1, '%', '2025-03-10 14:35:00', NOW()),
+                        (20, 'FUEL_001', 'CAR_FUEL_LEVEL', 36.5, '%', '2025-03-10 16:10:45', NOW());
+        </sql>
+
+    </changeSet>
+
+
+</databaseChangeLog>

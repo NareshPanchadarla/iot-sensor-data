@@ -1,0 +1,78 @@
+
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+      ZOOKEEPER_SYNC_LIMIT: 2
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: broker
+    ports:
+      - "9093:9093"  # External access for Spring Boot
+      - "9092:9092"  # Internal Docker network access
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:9092,PLAINTEXT_HOST://localhost:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_CREATE_TOPICS: "sensor-data"
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    depends_on:
+      - zookeeper
+
+  schema-registry:
+    image: confluentinc/cp-schema-registry:latest
+    container_name: schema-registry
+    environment:
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: "broker:9092"
+      SCHEMA_REGISTRY_LISTENER_HTTP_PORT: 8081
+      SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:8081
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+    ports:
+      - "8081:8081"
+    depends_on:
+      - kafka
+
+  mysql:
+    image: mysql:latest  # Pull the official MySQL image
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"  # Allow empty password for the root user
+      MYSQL_DATABASE: "SensorReading"  # MySQL database name
+      MYSQL_ROOT_HOST: "%"
+    healthcheck:
+      test: [ "CMD-SHELL", "mysqladmin ping -uroot -proot" ]
+      interval: 5s
+      timeout: 10s
+      retries: 5
+    ports:
+      - "3307:3306"  # Expose MySQL on port 3306
+    volumes:
+      - mysql-data:/var/lib/mysql  # Persistent storage for MySQL data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+    mysql-data:
+
+#  spring-boot-app:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#    ports:
+#      - "8080:8080"
+#    environment:
+#      SPRING_PROFILES_ACTIVE: "prod"  # Set Spring profile
+#      SPRING_DATASOURCE_URL: "jdbc:mysql://mysql:3306/SensorReading"  # Connect to the MySQL service
+#      SPRING_DATASOURCE_USERNAME: "root"  # MySQL username
+#      SPRING_DATASOURCE_PASSWORD: "root"  # MySQL password
+#    depends_on:
+#        - mysql
+#        - kafka
+

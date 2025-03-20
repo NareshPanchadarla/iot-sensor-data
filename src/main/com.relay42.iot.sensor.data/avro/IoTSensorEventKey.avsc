@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "IoTSensorEventKey",
+  "namespace": "com.relay42.iot.sensor.data.avro",
+  "fields": [
+    {
+      "name": "sensorId",
+      "type": "string"
+    }
+  ]
+}

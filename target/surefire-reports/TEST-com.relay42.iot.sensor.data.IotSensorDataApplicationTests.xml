@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.relay42.iot.sensor.data.IotSensorDataApplicationTests" time="0.49" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/naresh/personal/code/iot-sensor-data/target/test-classes:/Users/naresh/personal/code/iot-sensor-data/target/classes:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.3.9/spring-boot-starter-data-jpa-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.3.9/spring-boot-starter-aop-3.3.9.jar:/Users/naresh/.m2/repository/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.3.9/spring-boot-starter-jdbc-3.3.9.jar:/Users/naresh/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar:/Users/naresh/.m2/repository/org/springframework/spring-jdbc/6.1.17/spring-jdbc-6.1.17.jar:/Users/naresh/.m2/repository/org/hibernate/orm/hibernate-core/6.5.3.Final/hibernate-core-6.5.3.Final.jar:/Users/naresh/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/naresh/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/naresh/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/naresh/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/naresh/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/naresh/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/Users/naresh/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/naresh/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/naresh/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/naresh/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/naresh/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/naresh/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/naresh/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/naresh/.m2/repository/org/springframework/data/spring-data-jpa/3.3.9/spring-data-jpa-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/data/spring-data-commons/3.3.9/spring-data-commons-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/spring-orm/6.1.17/spring-orm-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/spring-beans/6.1.17/spring-beans-6.1.17.jar:/Users/naresh/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/naresh/.m2/repository/org/springframework/spring-aspects/6.1.17/spring-aspects-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.3.9/spring-boot-starter-security-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter/3.3.9/spring-boot-starter-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot/3.3.9/spring-boot-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.9/spring-boot-autoconfigure-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.3.9/spring-boot-starter-logging-3.3.9.jar:/Users/naresh/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar:/Users/naresh/.m2/repository/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar:/Users/naresh/.m2/repository/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar:/Users/naresh/.m2/repository/org/springframework/spring-aop/6.1.17/spring-aop-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/security/spring-security-config/6.3.7/spring-security-config-6.3.7.jar:/Users/naresh/.m2/repository/org/springframework/security/spring-security-web/6.3.7/spring-security-web-6.3.7.jar:/Users/naresh/.m2/repository/org/springframework/spring-expression/6.1.17/spring-expression-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.3.9/spring-boot-starter-web-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.3.9/spring-boot-starter-json-3.3.9.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.3/jackson-datatype-jdk8-2.17.3.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.3/jackson-datatype-jsr310-2.17.3.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.3/jackson-module-parameter-names-2.17.3.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.3.9/spring-boot-starter-tomcat-3.3.9.jar:/Users/naresh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.36/tomcat-embed-core-10.1.36.jar:/Users/naresh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.36/tomcat-embed-websocket-10.1.36.jar:/Users/naresh/.m2/repository/org/springframework/spring-web/6.1.17/spring-web-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/spring-webmvc/6.1.17/spring-webmvc-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.3.9/spring-boot-starter-validation-3.3.9.jar:/Users/naresh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.36/tomcat-embed-el-10.1.36.jar:/Users/naresh/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.2.Final/hibernate-validator-8.0.2.Final.jar:/Users/naresh/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/naresh/.m2/repository/org/springframework/kafka/spring-kafka/3.3.3/spring-kafka-3.3.3.jar:/Users/naresh/.m2/repository/org/springframework/spring-context/6.1.17/spring-context-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/spring-messaging/6.1.17/spring-messaging-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/spring-tx/6.1.17/spring-tx-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/retry/spring-retry/2.0.11/spring-retry-2.0.11.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-clients/3.7.2/kafka-clients-3.7.2.jar:/Users/naresh/.m2/repository/com/github/luben/zstd-jni/1.5.6-4/zstd-jni-1.5.6-4.jar:/Users/naresh/.m2/repository/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/Users/naresh/.m2/repository/org/xerial/snappy/snappy-java/1.1.10.5/snappy-java-1.1.10.5.jar:/Users/naresh/.m2/repository/io/micrometer/micrometer-observation/1.13.11/micrometer-observation-1.13.11.jar:/Users/naresh/.m2/repository/io/micrometer/micrometer-commons/1.13.11/micrometer-commons-1.13.11.jar:/Users/naresh/.m2/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.3.9/spring-boot-starter-test-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-test/3.3.9/spring-boot-test-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.3.9/spring-boot-test-autoconfigure-3.3.9.jar:/Users/naresh/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/naresh/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/naresh/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/naresh/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/Users/naresh/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/Users/naresh/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/Users/naresh/.m2/repository/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar:/Users/naresh/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/Users/naresh/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/naresh/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.5/junit-jupiter-5.10.5.jar:/Users/naresh/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.5/junit-jupiter-params-5.10.5.jar:/Users/naresh/.m2/repository/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.jar:/Users/naresh/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/naresh/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/naresh/.m2/repository/org/springframework/spring-core/6.1.17/spring-core-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/spring-jcl/6.1.17/spring-jcl-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/spring-test/6.1.17/spring-test-6.1.17.jar:/Users/naresh/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/naresh/.m2/repository/org/springframework/kafka/spring-kafka-test/3.2.7/spring-kafka-test-3.2.7.jar:/Users/naresh/.m2/repository/org/apache/zookeeper/zookeeper/3.8.4/zookeeper-3.8.4.jar:/Users/naresh/.m2/repository/org/apache/zookeeper/zookeeper-jute/3.8.4/zookeeper-jute-3.8.4.jar:/Users/naresh/.m2/repository/org/apache/yetus/audience-annotations/0.12.0/audience-annotations-0.12.0.jar:/Users/naresh/.m2/repository/io/netty/netty-handler/4.1.118.Final/netty-handler-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-common/4.1.118.Final/netty-common-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-resolver/4.1.118.Final/netty-resolver-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-buffer/4.1.118.Final/netty-buffer-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-transport/4.1.118.Final/netty-transport-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.118.Final/netty-transport-native-unix-common-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-codec/4.1.118.Final/netty-codec-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-transport-native-epoll/4.1.118.Final/netty-transport-native-epoll-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.118.Final/netty-transport-classes-epoll-4.1.118.Final.jar:/Users/naresh/.m2/repository/ch/qos/logback/logback-core/1.5.16/logback-core-1.5.16.jar:/Users/naresh/.m2/repository/ch/qos/logback/logback-classic/1.5.16/logback-classic-1.5.16.jar:/Users/naresh/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-clients/3.7.2/kafka-clients-3.7.2-test.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-metadata/3.7.2/kafka-metadata-3.7.2.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-raft/3.7.2/kafka-raft-3.7.2.jar:/Users/naresh/.m2/repository/com/yammer/metrics/metrics-core/2.2.0/metrics-core-2.2.0.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-server-common/3.7.2/kafka-server-common-3.7.2.jar:/Users/naresh/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/naresh/.m2/repository/org/pcollections/pcollections/4.0.1/pcollections-4.0.1.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-server-common/3.7.2/kafka-server-common-3.7.2-test.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-streams-test-utils/3.7.2/kafka-streams-test-utils-3.7.2.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-streams/3.7.2/kafka-streams-3.7.2.jar:/Users/naresh/.m2/repository/org/rocksdb/rocksdbjni/7.9.2/rocksdbjni-7.9.2.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka_2.13/3.7.2/kafka_2.13-3.7.2.jar:/Users/naresh/.m2/repository/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-group-coordinator/3.7.2/kafka-group-coordinator-3.7.2.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-storage-api/3.7.2/kafka-storage-api-3.7.2.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-tools-api/3.7.2/kafka-tools-api-3.7.2.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-storage/3.7.2/kafka-storage-3.7.2.jar:/Users/naresh/.m2/repository/com/github/ben-manes/caffeine/caffeine/3.1.8/caffeine-3.1.8.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-server/3.7.2/kafka-server-3.7.2.jar:/Users/naresh/.m2/repository/net/sourceforge/argparse4j/argparse4j/0.7.0/argparse4j-0.7.0.jar:/Users/naresh/.m2/repository/commons-validator/commons-validator/1.7/commons-validator-1.7.jar:/Users/naresh/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/Users/naresh/.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar:/Users/naresh/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/module/jackson-module-scala_2.13/2.17.3/jackson-module-scala_2.13-2.17.3.jar:/Users/naresh/.m2/repository/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.17.3/jackson-dataformat-csv-2.17.3.jar:/Users/naresh/.m2/repository/org/bitbucket/b_c/jose4j/0.9.4/jose4j-0.9.4.jar:/Users/naresh/.m2/repository/org/scala-lang/modules/scala-collection-compat_2.13/2.10.0/scala-collection-compat_2.13-2.10.0.jar:/Users/naresh/.m2/repository/org/scala-lang/modules/scala-java8-compat_2.13/1.0.2/scala-java8-compat_2.13-1.0.2.jar:/Users/naresh/.m2/repository/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.jar:/Users/naresh/.m2/repository/com/typesafe/scala-logging/scala-logging_2.13/3.9.4/scala-logging_2.13-3.9.4.jar:/Users/naresh/.m2/repository/io/dropwizard/metrics/metrics-core/4.1.12.1/metrics-core-4.1.12.1.jar:/Users/naresh/.m2/repository/commons-cli/commons-cli/1.4/commons-cli-1.4.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka_2.13/3.7.2/kafka_2.13-3.7.2-test.jar:/Users/naresh/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.5/junit-platform-launcher-1.10.5.jar:/Users/naresh/.m2/repository/org/springframework/security/spring-security-test/6.3.7/spring-security-test-6.3.7.jar:/Users/naresh/.m2/repository/org/springframework/security/spring-security-core/6.3.7/spring-security-core-6.3.7.jar:/Users/naresh/.m2/repository/org/springframework/security/spring-security-crypto/6.3.7/spring-security-crypto-6.3.7.jar:/Users/naresh/.m2/repository/org/liquibase/liquibase-core/4.27.0/liquibase-core-4.27.0.jar:/Users/naresh/.m2/repository/com/opencsv/opencsv/5.9/opencsv-5.9.jar:/Users/naresh/.m2/repository/org/apache/commons/commons-text/1.11.0/commons-text-1.11.0.jar:/Users/naresh/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/naresh/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/naresh/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/Users/naresh/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/Users/naresh/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.3/jackson-databind-2.17.3.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.3/jackson-annotations-2.17.3.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.3/jackson-core-2.17.3.jar:/Users/naresh/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.2.0/springdoc-openapi-starter-webmvc-ui-2.2.0.jar:/Users/naresh/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.2.0/springdoc-openapi-starter-webmvc-api-2.2.0.jar:/Users/naresh/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.2.0/springdoc-openapi-starter-common-2.2.0.jar:/Users/naresh/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.15/swagger-core-jakarta-2.2.15.jar:/Users/naresh/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.15/swagger-annotations-jakarta-2.2.15.jar:/Users/naresh/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.15/swagger-models-jakarta-2.2.15.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.17.3/jackson-dataformat-yaml-2.17.3.jar:/Users/naresh/.m2/repository/org/webjars/swagger-ui/5.2.0/swagger-ui-5.2.0.jar:/Users/naresh/.m2/repository/io/jsonwebtoken/jjwt/0.9.1/jjwt-0.9.1.jar:/Users/naresh/.m2/repository/org/mockito/mockito-core/4.4.0/mockito-core-4.4.0.jar:/Users/naresh/.m2/repository/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.jar:/Users/naresh/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar:/Users/naresh/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:/Users/naresh/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/naresh/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/naresh/.m2/repository/org/junit/platform/junit-platform-commons/1.10.5/junit-platform-commons-1.10.5.jar:/Users/naresh/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/naresh/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/naresh/.m2/repository/org/junit/platform/junit-platform-engine/1.10.5/junit-platform-engine-1.10.5.jar:/Users/naresh/.m2/repository/io/confluent/kafka-avro-serializer/7.7.1/kafka-avro-serializer-7.7.1.jar:/Users/naresh/.m2/repository/org/apache/commons/commons-compress/1.26.1/commons-compress-1.26.1.jar:/Users/naresh/.m2/repository/commons-codec/commons-codec/1.16.1/commons-codec-1.16.1.jar:/Users/naresh/.m2/repository/io/confluent/kafka-schema-serializer/7.7.1/kafka-schema-serializer-7.7.1.jar:/Users/naresh/.m2/repository/io/confluent/kafka-schema-registry-client/7.7.1/kafka-schema-registry-client-7.7.1.jar:/Users/naresh/.m2/repository/io/swagger/core/v3/swagger-annotations/2.1.10/swagger-annotations-2.1.10.jar:/Users/naresh/.m2/repository/com/google/guava/guava/32.0.1-jre/guava-32.0.1-jre.jar:/Users/naresh/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/naresh/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/naresh/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/naresh/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/Users/naresh/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/Users/naresh/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/naresh/.m2/repository/io/confluent/logredactor/1.0.12/logredactor-1.0.12.jar:/Users/naresh/.m2/repository/com/google/re2j/re2j/1.6/re2j-1.6.jar:/Users/naresh/.m2/repository/io/confluent/logredactor-metrics/1.0.12/logredactor-metrics-1.0.12.jar:/Users/naresh/.m2/repository/com/eclipsesource/minimal-json/minimal-json/0.9.5/minimal-json-0.9.5.jar:/Users/naresh/.m2/repository/io/confluent/common-utils/7.7.1/common-utils-7.7.1.jar:/Users/naresh/.m2/repository/org/apache/avro/avro/1.11.1/avro-1.11.1.jar:/Users/naresh/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value="Europe/Amsterdam"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="NL"/>
+    <property name="sun.boot.library.path" value="/Users/naresh/Library/Java/JavaVirtualMachines/corretto-21.0.6/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/naresh/personal/code/iot-sensor-data/target/surefire/surefirebooter-20250320212935764_3.jar /Users/naresh/personal/code/iot-sensor-data/target/surefire 2025-03-20T21-29-35_717-jvmRun1 surefire-20250320212935764_1tmp surefire_0-20250320212935764_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/naresh/personal/code/iot-sensor-data/target/test-classes:/Users/naresh/personal/code/iot-sensor-data/target/classes:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.3.9/spring-boot-starter-data-jpa-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.3.9/spring-boot-starter-aop-3.3.9.jar:/Users/naresh/.m2/repository/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.3.9/spring-boot-starter-jdbc-3.3.9.jar:/Users/naresh/.m2/repository/com/zaxxer/HikariCP/5.1.0/HikariCP-5.1.0.jar:/Users/naresh/.m2/repository/org/springframework/spring-jdbc/6.1.17/spring-jdbc-6.1.17.jar:/Users/naresh/.m2/repository/org/hibernate/orm/hibernate-core/6.5.3.Final/hibernate-core-6.5.3.Final.jar:/Users/naresh/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/naresh/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/naresh/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/naresh/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/naresh/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/naresh/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/Users/naresh/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/naresh/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/naresh/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/naresh/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/naresh/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/naresh/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/naresh/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar:/Users/naresh/.m2/repository/org/springframework/data/spring-data-jpa/3.3.9/spring-data-jpa-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/data/spring-data-commons/3.3.9/spring-data-commons-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/spring-orm/6.1.17/spring-orm-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/spring-beans/6.1.17/spring-beans-6.1.17.jar:/Users/naresh/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/naresh/.m2/repository/org/springframework/spring-aspects/6.1.17/spring-aspects-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.3.9/spring-boot-starter-security-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter/3.3.9/spring-boot-starter-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot/3.3.9/spring-boot-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.9/spring-boot-autoconfigure-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.3.9/spring-boot-starter-logging-3.3.9.jar:/Users/naresh/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar:/Users/naresh/.m2/repository/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar:/Users/naresh/.m2/repository/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar:/Users/naresh/.m2/repository/org/springframework/spring-aop/6.1.17/spring-aop-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/security/spring-security-config/6.3.7/spring-security-config-6.3.7.jar:/Users/naresh/.m2/repository/org/springframework/security/spring-security-web/6.3.7/spring-security-web-6.3.7.jar:/Users/naresh/.m2/repository/org/springframework/spring-expression/6.1.17/spring-expression-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.3.9/spring-boot-starter-web-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.3.9/spring-boot-starter-json-3.3.9.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.3/jackson-datatype-jdk8-2.17.3.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.3/jackson-datatype-jsr310-2.17.3.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.3/jackson-module-parameter-names-2.17.3.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.3.9/spring-boot-starter-tomcat-3.3.9.jar:/Users/naresh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.36/tomcat-embed-core-10.1.36.jar:/Users/naresh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.36/tomcat-embed-websocket-10.1.36.jar:/Users/naresh/.m2/repository/org/springframework/spring-web/6.1.17/spring-web-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/spring-webmvc/6.1.17/spring-webmvc-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.3.9/spring-boot-starter-validation-3.3.9.jar:/Users/naresh/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.36/tomcat-embed-el-10.1.36.jar:/Users/naresh/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.2.Final/hibernate-validator-8.0.2.Final.jar:/Users/naresh/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/naresh/.m2/repository/org/springframework/kafka/spring-kafka/3.3.3/spring-kafka-3.3.3.jar:/Users/naresh/.m2/repository/org/springframework/spring-context/6.1.17/spring-context-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/spring-messaging/6.1.17/spring-messaging-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/spring-tx/6.1.17/spring-tx-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/retry/spring-retry/2.0.11/spring-retry-2.0.11.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-clients/3.7.2/kafka-clients-3.7.2.jar:/Users/naresh/.m2/repository/com/github/luben/zstd-jni/1.5.6-4/zstd-jni-1.5.6-4.jar:/Users/naresh/.m2/repository/org/lz4/lz4-java/1.8.0/lz4-java-1.8.0.jar:/Users/naresh/.m2/repository/org/xerial/snappy/snappy-java/1.1.10.5/snappy-java-1.1.10.5.jar:/Users/naresh/.m2/repository/io/micrometer/micrometer-observation/1.13.11/micrometer-observation-1.13.11.jar:/Users/naresh/.m2/repository/io/micrometer/micrometer-commons/1.13.11/micrometer-commons-1.13.11.jar:/Users/naresh/.m2/repository/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.3.9/spring-boot-starter-test-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-test/3.3.9/spring-boot-test-3.3.9.jar:/Users/naresh/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.3.9/spring-boot-test-autoconfigure-3.3.9.jar:/Users/naresh/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/naresh/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/naresh/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/naresh/.m2/repository/net/minidev/json-smart/2.5.2/json-smart-2.5.2.jar:/Users/naresh/.m2/repository/net/minidev/accessors-smart/2.5.2/accessors-smart-2.5.2.jar:/Users/naresh/.m2/repository/org/ow2/asm/asm/9.7.1/asm-9.7.1.jar:/Users/naresh/.m2/repository/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar:/Users/naresh/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/Users/naresh/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/naresh/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.5/junit-jupiter-5.10.5.jar:/Users/naresh/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.5/junit-jupiter-params-5.10.5.jar:/Users/naresh/.m2/repository/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.jar:/Users/naresh/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/Users/naresh/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/naresh/.m2/repository/org/springframework/spring-core/6.1.17/spring-core-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/spring-jcl/6.1.17/spring-jcl-6.1.17.jar:/Users/naresh/.m2/repository/org/springframework/spring-test/6.1.17/spring-test-6.1.17.jar:/Users/naresh/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/naresh/.m2/repository/org/springframework/kafka/spring-kafka-test/3.2.7/spring-kafka-test-3.2.7.jar:/Users/naresh/.m2/repository/org/apache/zookeeper/zookeeper/3.8.4/zookeeper-3.8.4.jar:/Users/naresh/.m2/repository/org/apache/zookeeper/zookeeper-jute/3.8.4/zookeeper-jute-3.8.4.jar:/Users/naresh/.m2/repository/org/apache/yetus/audience-annotations/0.12.0/audience-annotations-0.12.0.jar:/Users/naresh/.m2/repository/io/netty/netty-handler/4.1.118.Final/netty-handler-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-common/4.1.118.Final/netty-common-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-resolver/4.1.118.Final/netty-resolver-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-buffer/4.1.118.Final/netty-buffer-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-transport/4.1.118.Final/netty-transport-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.118.Final/netty-transport-native-unix-common-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-codec/4.1.118.Final/netty-codec-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-transport-native-epoll/4.1.118.Final/netty-transport-native-epoll-4.1.118.Final.jar:/Users/naresh/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.118.Final/netty-transport-classes-epoll-4.1.118.Final.jar:/Users/naresh/.m2/repository/ch/qos/logback/logback-core/1.5.16/logback-core-1.5.16.jar:/Users/naresh/.m2/repository/ch/qos/logback/logback-classic/1.5.16/logback-classic-1.5.16.jar:/Users/naresh/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-clients/3.7.2/kafka-clients-3.7.2-test.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-metadata/3.7.2/kafka-metadata-3.7.2.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-raft/3.7.2/kafka-raft-3.7.2.jar:/Users/naresh/.m2/repository/com/yammer/metrics/metrics-core/2.2.0/metrics-core-2.2.0.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-server-common/3.7.2/kafka-server-common-3.7.2.jar:/Users/naresh/.m2/repository/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar:/Users/naresh/.m2/repository/org/pcollections/pcollections/4.0.1/pcollections-4.0.1.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-server-common/3.7.2/kafka-server-common-3.7.2-test.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-streams-test-utils/3.7.2/kafka-streams-test-utils-3.7.2.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-streams/3.7.2/kafka-streams-3.7.2.jar:/Users/naresh/.m2/repository/org/rocksdb/rocksdbjni/7.9.2/rocksdbjni-7.9.2.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka_2.13/3.7.2/kafka_2.13-3.7.2.jar:/Users/naresh/.m2/repository/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-group-coordinator/3.7.2/kafka-group-coordinator-3.7.2.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-storage-api/3.7.2/kafka-storage-api-3.7.2.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-tools-api/3.7.2/kafka-tools-api-3.7.2.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-storage/3.7.2/kafka-storage-3.7.2.jar:/Users/naresh/.m2/repository/com/github/ben-manes/caffeine/caffeine/3.1.8/caffeine-3.1.8.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka-server/3.7.2/kafka-server-3.7.2.jar:/Users/naresh/.m2/repository/net/sourceforge/argparse4j/argparse4j/0.7.0/argparse4j-0.7.0.jar:/Users/naresh/.m2/repository/commons-validator/commons-validator/1.7/commons-validator-1.7.jar:/Users/naresh/.m2/repository/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar:/Users/naresh/.m2/repository/commons-digester/commons-digester/2.1/commons-digester-2.1.jar:/Users/naresh/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/module/jackson-module-scala_2.13/2.17.3/jackson-module-scala_2.13-2.17.3.jar:/Users/naresh/.m2/repository/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-csv/2.17.3/jackson-dataformat-csv-2.17.3.jar:/Users/naresh/.m2/repository/org/bitbucket/b_c/jose4j/0.9.4/jose4j-0.9.4.jar:/Users/naresh/.m2/repository/org/scala-lang/modules/scala-collection-compat_2.13/2.10.0/scala-collection-compat_2.13-2.10.0.jar:/Users/naresh/.m2/repository/org/scala-lang/modules/scala-java8-compat_2.13/1.0.2/scala-java8-compat_2.13-1.0.2.jar:/Users/naresh/.m2/repository/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.jar:/Users/naresh/.m2/repository/com/typesafe/scala-logging/scala-logging_2.13/3.9.4/scala-logging_2.13-3.9.4.jar:/Users/naresh/.m2/repository/io/dropwizard/metrics/metrics-core/4.1.12.1/metrics-core-4.1.12.1.jar:/Users/naresh/.m2/repository/commons-cli/commons-cli/1.4/commons-cli-1.4.jar:/Users/naresh/.m2/repository/org/apache/kafka/kafka_2.13/3.7.2/kafka_2.13-3.7.2-test.jar:/Users/naresh/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.5/junit-platform-launcher-1.10.5.jar:/Users/naresh/.m2/repository/org/springframework/security/spring-security-test/6.3.7/spring-security-test-6.3.7.jar:/Users/naresh/.m2/repository/org/springframework/security/spring-security-core/6.3.7/spring-security-core-6.3.7.jar:/Users/naresh/.m2/repository/org/springframework/security/spring-security-crypto/6.3.7/spring-security-crypto-6.3.7.jar:/Users/naresh/.m2/repository/org/liquibase/liquibase-core/4.27.0/liquibase-core-4.27.0.jar:/Users/naresh/.m2/repository/com/opencsv/opencsv/5.9/opencsv-5.9.jar:/Users/naresh/.m2/repository/org/apache/commons/commons-text/1.11.0/commons-text-1.11.0.jar:/Users/naresh/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/Users/naresh/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/naresh/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/Users/naresh/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/Users/naresh/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.3/jackson-databind-2.17.3.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.3/jackson-annotations-2.17.3.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.3/jackson-core-2.17.3.jar:/Users/naresh/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.2.0/springdoc-openapi-starter-webmvc-ui-2.2.0.jar:/Users/naresh/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.2.0/springdoc-openapi-starter-webmvc-api-2.2.0.jar:/Users/naresh/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.2.0/springdoc-openapi-starter-common-2.2.0.jar:/Users/naresh/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.15/swagger-core-jakarta-2.2.15.jar:/Users/naresh/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.15/swagger-annotations-jakarta-2.2.15.jar:/Users/naresh/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.15/swagger-models-jakarta-2.2.15.jar:/Users/naresh/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.17.3/jackson-dataformat-yaml-2.17.3.jar:/Users/naresh/.m2/repository/org/webjars/swagger-ui/5.2.0/swagger-ui-5.2.0.jar:/Users/naresh/.m2/repository/io/jsonwebtoken/jjwt/0.9.1/jjwt-0.9.1.jar:/Users/naresh/.m2/repository/org/mockito/mockito-core/4.4.0/mockito-core-4.4.0.jar:/Users/naresh/.m2/repository/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.jar:/Users/naresh/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar:/Users/naresh/.m2/repository/org/objenesis/objenesis/3.2/objenesis-3.2.jar:/Users/naresh/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/naresh/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/naresh/.m2/repository/org/junit/platform/junit-platform-commons/1.10.5/junit-platform-commons-1.10.5.jar:/Users/naresh/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/naresh/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/naresh/.m2/repository/org/junit/platform/junit-platform-engine/1.10.5/junit-platform-engine-1.10.5.jar:/Users/naresh/.m2/repository/io/confluent/kafka-avro-serializer/7.7.1/kafka-avro-serializer-7.7.1.jar:/Users/naresh/.m2/repository/org/apache/commons/commons-compress/1.26.1/commons-compress-1.26.1.jar:/Users/naresh/.m2/repository/commons-codec/commons-codec/1.16.1/commons-codec-1.16.1.jar:/Users/naresh/.m2/repository/io/confluent/kafka-schema-serializer/7.7.1/kafka-schema-serializer-7.7.1.jar:/Users/naresh/.m2/repository/io/confluent/kafka-schema-registry-client/7.7.1/kafka-schema-registry-client-7.7.1.jar:/Users/naresh/.m2/repository/io/swagger/core/v3/swagger-annotations/2.1.10/swagger-annotations-2.1.10.jar:/Users/naresh/.m2/repository/com/google/guava/guava/32.0.1-jre/guava-32.0.1-jre.jar:/Users/naresh/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/naresh/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/naresh/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/naresh/.m2/repository/org/checkerframework/checker-qual/3.33.0/checker-qual-3.33.0.jar:/Users/naresh/.m2/repository/com/google/errorprone/error_prone_annotations/2.18.0/error_prone_annotations-2.18.0.jar:/Users/naresh/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/Users/naresh/.m2/repository/io/confluent/logredactor/1.0.12/logredactor-1.0.12.jar:/Users/naresh/.m2/repository/com/google/re2j/re2j/1.6/re2j-1.6.jar:/Users/naresh/.m2/repository/io/confluent/logredactor-metrics/1.0.12/logredactor-metrics-1.0.12.jar:/Users/naresh/.m2/repository/com/eclipsesource/minimal-json/minimal-json/0.9.5/minimal-json-0.9.5.jar:/Users/naresh/.m2/repository/io/confluent/common-utils/7.7.1/common-utils-7.7.1.jar:/Users/naresh/.m2/repository/org/apache/avro/avro/1.11.1/avro-1.11.1.jar:/Users/naresh/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/naresh"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="/Users/naresh/Library/Java/JavaVirtualMachines/corretto-21.0.6/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/naresh/personal/code/iot-sensor-data"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/naresh/personal/code/iot-sensor-data/target/surefire/surefirebooter-20250320212935764_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.6+7-LTS"/>
+    <property name="user.name" value="naresh"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.3.2"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-21.0.6.7.1"/>
+    <property name="localRepository" value="/Users/naresh/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-21/issues/"/>
+    <property name="java.io.tmpdir" value="/var/folders/7t/1cs8vsyd2bbcbm2mvdy7vrnw0000gp/T/"/>
+    <property name="com.zaxxer.hikari.pool_number" value="3"/>
+    <property name="java.version" value="21.0.6"/>
+    <property name="user.dir" value="/Users/naresh/personal/code/iot-sensor-data"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="28294"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/naresh/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="21.0.6+7-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[iot-sensor-data] "/>
+  </properties>
+  <testcase name="contextLoads" classname="com.relay42.iot.sensor.data.IotSensorDataApplicationTests" time="0.001">
+    <system-out><![CDATA[2025-03-20T21:29:42.381+01:00  INFO 28294 --- [iot-sensor-data] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.relay42.iot.sensor.data.IotSensorDataApplicationTests]: IotSensorDataApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-03-20T21:29:42.388+01:00  INFO 28294 --- [iot-sensor-data] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.relay42.iot.sensor.data.IoTSensorDataApplication for test class com.relay42.iot.sensor.data.IotSensorDataApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.9)
+
+2025-03-20T21:29:42.406+01:00  INFO 28294 --- [iot-sensor-data] [           main] c.r.i.s.d.IotSensorDataApplicationTests  : Starting IotSensorDataApplicationTests using Java 21.0.6 with PID 28294 (started by naresh in /Users/naresh/personal/code/iot-sensor-data)
+2025-03-20T21:29:42.406+01:00  INFO 28294 --- [iot-sensor-data] [           main] c.r.i.s.d.IotSensorDataApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2025-03-20T21:29:42.500+01:00  INFO 28294 --- [iot-sensor-data] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-20T21:29:42.513+01:00  INFO 28294 --- [iot-sensor-data] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 2 JPA repository interfaces.
+2025-03-20T21:29:42.551+01:00  INFO 28294 --- [iot-sensor-data] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-03-20T21:29:42.579+01:00  INFO 28294 --- [iot-sensor-data] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7330574d
+2025-03-20T21:29:42.579+01:00  INFO 28294 --- [iot-sensor-data] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-03-20T21:29:42.581+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.database                       : Connected to root@192.168.127.1@jdbc:mysql://localhost:3307/SensorReading
+2025-03-20T21:29:42.581+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.database                       : Setting auto commit to false from true
+2025-03-20T21:29:42.583+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.configuration                  : Found 'liquibase.command.update.changelogParameters' configuration of 'liquibase.changelog.ChangeLogParameters@147c3a88'
+    command argument 'changelogParameters' of 'liquibase.changelog.ChangeLogParameters@147c3a88'
+2025-03-20T21:29:42.585+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.configuration                  : Configuration liquibase.command.update.showSummary is using the default value of SUMMARY
+2025-03-20T21:29:42.585+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.configuration                  : Configuration liquibase.command.showSummary is using the default value of SUMMARY
+2025-03-20T21:29:42.585+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.configuration                  : Configuration liquibase.command.update.skipDatabaseStep is using the default value of false
+2025-03-20T21:29:42.585+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.configuration                  : Configuration liquibase.command.skipDatabaseStep is using the default value of false
+2025-03-20T21:29:42.585+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.configuration                  : No configuration value for liquibase.command.update.updateNullChecksums found
+2025-03-20T21:29:42.585+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.configuration                  : Configuration liquibase.command.update.updateNullChecksums is using the default value of false
+2025-03-20T21:29:42.585+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.configuration                  : Configuration liquibase.command.updateNullChecksums is using the default value of false
+2025-03-20T21:29:42.587+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.command                        : Pipeline for command 'update: liquibase.command.core.helpers.DbUrlConnectionArgumentsCommandStep then liquibase.command.core.helpers.ShowSummaryArgument then liquibase.command.core.helpers.DbUrlConnectionCommandStep then liquibase.command.core.helpers.DatabaseChangelogCommandStep then liquibase.command.core.helpers.ChangeExecListenerCommandStep then liquibase.command.core.UpdateCommandStep
+2025-03-20T21:29:42.587+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.command                        : Writing output with encoding 'UTF-8'
+2025-03-20T21:29:42.587+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.command                        : Executing internal command dbUrlConnectionArguments
+2025-03-20T21:29:42.587+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.command                        : Executing internal command showSummary
+2025-03-20T21:29:42.587+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.configuration                  : Configuration liquibase.command.update.showSummary is using the default value of SUMMARY
+2025-03-20T21:29:42.587+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.configuration                  : Configuration liquibase.command.showSummary is using the default value of SUMMARY
+2025-03-20T21:29:42.587+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.command                        : Executing internal command dbUrlConnectionCommandStep
+2025-03-20T21:29:42.587+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.configuration                  : Configuration liquibase.command.update.skipDatabaseStep is using the default value of false
+2025-03-20T21:29:42.587+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.configuration                  : Configuration liquibase.command.skipDatabaseStep is using the default value of false
+2025-03-20T21:29:42.590+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.command                        : Executing internal command changelogCommandStep
+2025-03-20T21:29:42.590+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.parser                         : Matched file 'classpath:liquibase/changelog-master.xml' to parser 'XMLChangeLogSAXParser'
+2025-03-20T21:29:42.591+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.parser                         : Resolving XML entity name='null', publicId='null', baseURI='null', systemId='https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd'
+2025-03-20T21:29:42.602+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.configuration                  : Found 'liquibase.command.update.updateNullChecksums' configuration of 'true'
+    command argument 'updateNullChecksums' of 'true'
+2025-03-20T21:29:42.633+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.executor                       : Changelog query completed.
+2025-03-20T21:29:42.636+01:00  INFO 28294 --- [iot-sensor-data] [           main] liquibase.changelog                      : Reading from SensorReading.DATABASECHANGELOG
+2025-03-20T21:29:42.638+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.executor                       : Changelog query completed.
+2025-03-20T21:29:42.639+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.servicelocator                 : Loaded liquibase.lockservice.LockService instance liquibase.lockservice.LockServiceImpl
+2025-03-20T21:29:42.639+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.servicelocator                 : Loaded liquibase.lockservice.LockService instance liquibase.lockservice.MockLockService
+2025-03-20T21:29:42.639+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.servicelocator                 : Loaded liquibase.lockservice.LockService instance liquibase.lockservice.OfflineLockService
+2025-03-20T21:29:42.639+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.servicelocator                 : Loaded liquibase.lockservice.LockService instance liquibase.lockservice.StandardLockService
+2025-03-20T21:29:42.644+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.executor                       : Changelog query completed.
+2025-03-20T21:29:42.646+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Computed checksum for createTable:[
+    columns=[
+        [
+            [
+                nullable="false"
+                primaryKey="true"
+                primaryKeyName="pk_SensorReading"
+            ]
+            autoIncrement="true"
+            name="Id"
+            type="BIGINT"
+        ],
+        [
+            [
+                nullable="false"
+            ]
+            name="Sensor_Id"
+            type="VARCHAR(100)"
+        ],
+        [
+            [
+                nullable="false"
+            ]
+           ... [truncated in log] as 50a8bcabcd5cf1292ab287eeb32bdf94
+2025-03-20T21:29:42.646+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Computed checksum for 9:50a8bcabcd5cf1292ab287eeb32bdf94: as 51589466762a7424e46f97f1a1eae081
+2025-03-20T21:29:42.646+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Computed checksum for createIndex:[
+    columns=[
+        [
+            name="Sensor_Id"
+        ]
+    ]
+    indexName="idx_sensor_readings_sensor_id"
+    tableName="SensorReading"
+] as e579309f37b9d8265b3788caa127a8a2
+2025-03-20T21:29:42.646+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Computed checksum for createIndex:[
+    columns=[
+        [
+            name="Sensor_Type"
+        ]
+    ]
+    indexName="idx_sensor_readings_sensor_type"
+    tableName="SensorReading"
+] as 00ba1e8a20fec2b4864ccfe271340d65
+2025-03-20T21:29:42.647+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Computed checksum for createIndex:[
+    columns=[
+        [
+            name="Reading_At"
+        ]
+    ]
+    indexName="idx_sensor_readings_reading_timestamp"
+    tableName="SensorReading"
+] as 249119ad277917d202419063d9c3cdec
+2025-03-20T21:29:42.647+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Computed checksum for createIndex:[
+    columns=[
+        [
+            name="Sensor_Id"
+        ],
+        [
+            name="Sensor_Type"
+        ],
+        [
+            name="Reading_At"
+        ]
+    ]
+    indexName="idx_sensor_readings_sensorid_timestamp"
+    tableName="SensorReading"
+] as 4615e422e0eb0a5777ab1a342e1e60ee
+2025-03-20T21:29:42.647+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Computed checksum for 9:e579309f37b9d8265b3788caa127a8a2:9:00ba1e8a20fec2b4864ccfe271340d65:9:249119ad277917d202419063d9c3cdec:9:4615e422e0eb0a5777ab1a342e1e60ee: as 0857c932dc17e1809464565e831ceff7
+2025-03-20T21:29:42.647+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Computed checksum for createTable:[
+    columns=[
+        [
+            [
+                nullable="false"
+                primaryKey="true"
+                primaryKeyName="pk_user"
+            ]
+            autoIncrement="true"
+            name="Id"
+            type="BIGINT"
+        ],
+        [
+            [
+                nullable="false"
+            ]
+            name="username"
+            type="VARCHAR(100)"
+        ],
+        [
+            [
+                nullable="false"
+            ]
+            name="ema... [truncated in log] as c963f7dbf14c0cb68b352f68e87da56a
+2025-03-20T21:29:42.647+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Computed checksum for 9:c963f7dbf14c0cb68b352f68e87da56a: as b36d33471010a2cc0d50ede0c1c1920c
+2025-03-20T21:29:42.647+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Computed checksum for addUniqueConstraint:[
+    columnNames="email"
+    constraintName="unique_email_constraint"
+    tableName="User"
+] as ea8e99d3f69f96de1941a4f8e14f5b6c
+2025-03-20T21:29:42.648+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Computed checksum for createIndex:[
+    columns=[
+        [
+            name="email"
+        ]
+    ]
+    indexName="idx_user_email"
+    tableName="User"
+] as ef14ee2b1bf56212531dd61b827c142b
+2025-03-20T21:29:42.648+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Computed checksum for 9:ea8e99d3f69f96de1941a4f8e14f5b6c:9:ef14ee2b1bf56212531dd61b827c142b: as f7ffa7014c02122e1bb6717c7900c65f
+2025-03-20T21:29:42.648+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Computed checksum for inputStream as 921b60e0df5d8fa400621474ef291c62
+2025-03-20T21:29:42.648+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Computed checksum for 9:921b60e0df5d8fa400621474ef291c62: as 1ace29a327839cce72eafbb643fe2e65
+2025-03-20T21:29:42.648+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.command                        : Executing internal command changeExecListener
+2025-03-20T21:29:42.648+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.command                        : Executing internal command update migrate
+2025-03-20T21:29:42.648+01:00  INFO 28294 --- [iot-sensor-data] [           main] liquibase.ui                             : Database is up to date, no changesets to execute
+2025-03-20T21:29:42.649+01:00  INFO 28294 --- [iot-sensor-data] [           main] liquibase.util                           : UPDATE SUMMARY
+2025-03-20T21:29:42.649+01:00  INFO 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Run:                          0
+2025-03-20T21:29:42.649+01:00  INFO 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Previously run:               5
+2025-03-20T21:29:42.649+01:00  INFO 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Filtered out:                 0
+2025-03-20T21:29:42.649+01:00  INFO 28294 --- [iot-sensor-data] [           main] liquibase.util                           : -------------------------------
+2025-03-20T21:29:42.649+01:00  INFO 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Total change sets:            5
+2025-03-20T21:29:42.649+01:00  INFO 28294 --- [iot-sensor-data] [           main] liquibase.util                           : Update summary generated
+2025-03-20T21:29:42.649+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.executor                       : Release Database Lock
+2025-03-20T21:29:42.651+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] liquibase.executor                       : Changelog query completed.
+2025-03-20T21:29:42.652+01:00  INFO 28294 --- [iot-sensor-data] [           main] liquibase.lockservice                    : Successfully released change log lock
+2025-03-20T21:29:42.652+01:00  INFO 28294 --- [iot-sensor-data] [           main] liquibase.command                        : Command execution complete
+2025-03-20T21:29:42.667+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-20T21:29:42.668+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-20T21:29:42.672+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-20T21:29:42.674+01:00  WARN 28294 --- [iot-sensor-data] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-20T21:29:42.700+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-20T21:29:42.700+01:00  INFO 28294 --- [iot-sensor-data] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-20T21:29:42.724+01:00  INFO 28294 --- [iot-sensor-data] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailsService
+2025-03-20T21:29:42.784+01:00 DEBUG 28294 --- [iot-sensor-data] [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, JwtRequestFilter, UsernamePasswordAuthenticationFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-03-20T21:29:42.844+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [localhost:9093]
+	client.dns.lookup = use_all_dns_ips
+	client.id = iot-sensor-data-admin-2
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2025-03-20T21:29:42.845+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.a.k.clients.admin.AdminClientConfig    : These configurations '[schema.registry.url, specific.avro.reader]' were supplied but are not used yet.
+2025-03-20T21:29:42.845+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.2
+2025-03-20T21:29:42.845+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 79a8f2b5f44f9d5a
+2025-03-20T21:29:42.845+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1742502582845
+2025-03-20T21:29:42.857+01:00  INFO 28294 --- [iot-sensor-data] [or-data-admin-2] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for iot-sensor-data-admin-2 unregistered
+2025-03-20T21:29:42.859+01:00  INFO 28294 --- [iot-sensor-data] [or-data-admin-2] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2025-03-20T21:29:42.859+01:00  INFO 28294 --- [iot-sensor-data] [or-data-admin-2] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2025-03-20T21:29:42.859+01:00  INFO 28294 --- [iot-sensor-data] [or-data-admin-2] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2025-03-20T21:29:42.860+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9093]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-sensor-data.group-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = sensor-data.group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+2025-03-20T21:29:42.861+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-03-20T21:29:42.861+01:00  INFO 28294 --- [iot-sensor-data] [           main] i.c.k.s.KafkaAvroDeserializerConfig      : KafkaAvroDeserializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.cache.expiry.buffer.seconds = 300
+	bearer.auth.client.id = null
+	bearer.auth.client.secret = null
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.custom.provider.class = null
+	bearer.auth.identity.pool.id = null
+	bearer.auth.issuer.endpoint.url = null
+	bearer.auth.logical.cluster = null
+	bearer.auth.scope = null
+	bearer.auth.scope.claim.name = scope
+	bearer.auth.sub.claim.name = sub
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	http.connect.timeout.ms = 60000
+	http.read.timeout.ms = 60000
+	id.compatibility.strict = true
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.cache.size = 1000
+	latest.cache.ttl.sec = -1
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	propagate.schema.tags = false
+	proxy.host = 
+	proxy.port = -1
+	rule.actions = []
+	rule.executors = []
+	rule.service.loader.enable = true
+	schema.format = null
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	specific.avro.key.type = null
+	specific.avro.reader = true
+	specific.avro.value.type = null
+	use.latest.version = false
+	use.latest.with.metadata = null
+	use.schema.id = -1
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-03-20T21:29:42.862+01:00  INFO 28294 --- [iot-sensor-data] [           main] i.c.k.s.KafkaAvroDeserializerConfig      : KafkaAvroDeserializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.cache.expiry.buffer.seconds = 300
+	bearer.auth.client.id = null
+	bearer.auth.client.secret = null
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.custom.provider.class = null
+	bearer.auth.identity.pool.id = null
+	bearer.auth.issuer.endpoint.url = null
+	bearer.auth.logical.cluster = null
+	bearer.auth.scope = null
+	bearer.auth.scope.claim.name = scope
+	bearer.auth.sub.claim.name = sub
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	http.connect.timeout.ms = 60000
+	http.read.timeout.ms = 60000
+	id.compatibility.strict = true
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.cache.size = 1000
+	latest.cache.ttl.sec = -1
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	propagate.schema.tags = false
+	proxy.host = 
+	proxy.port = -1
+	rule.actions = []
+	rule.executors = []
+	rule.service.loader.enable = true
+	schema.format = null
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	specific.avro.key.type = null
+	specific.avro.reader = true
+	specific.avro.value.type = null
+	use.latest.version = false
+	use.latest.with.metadata = null
+	use.schema.id = -1
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-03-20T21:29:42.862+01:00  INFO 28294 --- [iot-sensor-data] [           main] i.c.k.s.KafkaAvroDeserializerConfig      : KafkaAvroDeserializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.cache.expiry.buffer.seconds = 300
+	bearer.auth.client.id = null
+	bearer.auth.client.secret = null
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.custom.provider.class = null
+	bearer.auth.identity.pool.id = null
+	bearer.auth.issuer.endpoint.url = null
+	bearer.auth.logical.cluster = null
+	bearer.auth.scope = null
+	bearer.auth.scope.claim.name = scope
+	bearer.auth.sub.claim.name = sub
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	http.connect.timeout.ms = 60000
+	http.read.timeout.ms = 60000
+	id.compatibility.strict = true
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.cache.size = 1000
+	latest.cache.ttl.sec = -1
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	propagate.schema.tags = false
+	proxy.host = 
+	proxy.port = -1
+	rule.actions = []
+	rule.executors = []
+	rule.service.loader.enable = true
+	schema.format = null
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	specific.avro.key.type = null
+	specific.avro.reader = true
+	specific.avro.value.type = null
+	use.latest.version = false
+	use.latest.with.metadata = null
+	use.schema.id = -1
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-03-20T21:29:42.862+01:00  INFO 28294 --- [iot-sensor-data] [           main] i.c.k.s.KafkaAvroDeserializerConfig      : KafkaAvroDeserializerConfig values: 
+	auto.register.schemas = true
+	avro.reflection.allow.null = false
+	avro.use.logical.type.converters = false
+	basic.auth.credentials.source = URL
+	basic.auth.user.info = [hidden]
+	bearer.auth.cache.expiry.buffer.seconds = 300
+	bearer.auth.client.id = null
+	bearer.auth.client.secret = null
+	bearer.auth.credentials.source = STATIC_TOKEN
+	bearer.auth.custom.provider.class = null
+	bearer.auth.identity.pool.id = null
+	bearer.auth.issuer.endpoint.url = null
+	bearer.auth.logical.cluster = null
+	bearer.auth.scope = null
+	bearer.auth.scope.claim.name = scope
+	bearer.auth.sub.claim.name = sub
+	bearer.auth.token = [hidden]
+	context.name.strategy = class io.confluent.kafka.serializers.context.NullContextNameStrategy
+	http.connect.timeout.ms = 60000
+	http.read.timeout.ms = 60000
+	id.compatibility.strict = true
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	latest.cache.size = 1000
+	latest.cache.ttl.sec = -1
+	latest.compatibility.strict = true
+	max.schemas.per.subject = 1000
+	normalize.schemas = false
+	propagate.schema.tags = false
+	proxy.host = 
+	proxy.port = -1
+	rule.actions = []
+	rule.executors = []
+	rule.service.loader.enable = true
+	schema.format = null
+	schema.reflection = false
+	schema.registry.basic.auth.user.info = [hidden]
+	schema.registry.ssl.cipher.suites = null
+	schema.registry.ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	schema.registry.ssl.endpoint.identification.algorithm = https
+	schema.registry.ssl.engine.factory.class = null
+	schema.registry.ssl.key.password = null
+	schema.registry.ssl.keymanager.algorithm = SunX509
+	schema.registry.ssl.keystore.certificate.chain = null
+	schema.registry.ssl.keystore.key = null
+	schema.registry.ssl.keystore.location = null
+	schema.registry.ssl.keystore.password = null
+	schema.registry.ssl.keystore.type = JKS
+	schema.registry.ssl.protocol = TLSv1.3
+	schema.registry.ssl.provider = null
+	schema.registry.ssl.secure.random.implementation = null
+	schema.registry.ssl.trustmanager.algorithm = PKIX
+	schema.registry.ssl.truststore.certificates = null
+	schema.registry.ssl.truststore.location = null
+	schema.registry.ssl.truststore.password = null
+	schema.registry.ssl.truststore.type = JKS
+	schema.registry.url = [http://localhost:8081]
+	specific.avro.key.type = null
+	specific.avro.reader = true
+	specific.avro.value.type = null
+	use.latest.version = false
+	use.latest.with.metadata = null
+	use.schema.id = -1
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2025-03-20T21:29:42.864+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.a.k.clients.consumer.ConsumerConfig    : These configurations '[schema.registry.url, specific.avro.reader]' were supplied but are not used yet.
+2025-03-20T21:29:42.864+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.2
+2025-03-20T21:29:42.864+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 79a8f2b5f44f9d5a
+2025-03-20T21:29:42.864+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1742502582864
+2025-03-20T21:29:42.864+01:00  INFO 28294 --- [iot-sensor-data] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-sensor-data.group-3, groupId=sensor-data.group] Subscribed to topic(s): sensor-data
+2025-03-20T21:29:42.867+01:00  INFO 28294 --- [iot-sensor-data] [           main] c.r.i.s.d.IotSensorDataApplicationTests  : Started IotSensorDataApplicationTests in 0.478 seconds (process running for 7.012)
+]]></system-out>
+  </testcase>
+</testsuite>

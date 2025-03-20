@@ -1,0 +1,12 @@
+/Users/naresh/personal/code/iot-sensor-data/src/test/java/com/relay42/iot/sensor/data/IotSensorDataApplicationTests.java
+/Users/naresh/personal/code/iot-sensor-data/src/test/java/com/relay42/iot/sensor/data/config/CustomTestSecurityConfig.java
+/Users/naresh/personal/code/iot-sensor-data/src/test/java/com/relay42/iot/sensor/data/config/CustomUserDetails.java
+/Users/naresh/personal/code/iot-sensor-data/src/test/java/com/relay42/iot/sensor/data/controller/AuthenticationControllerTest.java
+/Users/naresh/personal/code/iot-sensor-data/src/test/java/com/relay42/iot/sensor/data/controller/SensorControllerTest.java
+/Users/naresh/personal/code/iot-sensor-data/src/test/java/com/relay42/iot/sensor/data/converter/AvroToEntityConverterTest.java
+/Users/naresh/personal/code/iot-sensor-data/src/test/java/com/relay42/iot/sensor/data/security/AuthenticateServiceTest.java
+/Users/naresh/personal/code/iot-sensor-data/src/test/java/com/relay42/iot/sensor/data/security/CustomUserDetailsServiceTest.java
+/Users/naresh/personal/code/iot-sensor-data/src/test/java/com/relay42/iot/sensor/data/security/JwtRequestFilterTest.java
+/Users/naresh/personal/code/iot-sensor-data/src/test/java/com/relay42/iot/sensor/data/service/SensorServiceImplTest.java
+/Users/naresh/personal/code/iot-sensor-data/src/test/java/com/relay42/iot/sensor/data/service/UserServiceImplTest.java
+/Users/naresh/personal/code/iot-sensor-data/src/test/java/com/relay42/iot/sensor/data/util/JwtTokenUtilTest.java

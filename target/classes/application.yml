@@ -1,0 +1,73 @@
+spring:
+  application.name: iot-sensor-data
+
+# Database configurations
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/SensorReading
+    username: root
+    password: root
+
+  data.jpa.repositories.bootstrap-mode: default
+  jpa:
+    hibernate:
+      naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: none
+    properties.hibernate.dialect: org.hibernate.dialect.MySQLDialect
+    properties.hibernate.cache:
+      use_second_level_cache: false
+      use_query_cache: false
+    open-in-view: false
+    show-sql: false
+
+
+  # Liquibase
+  liquibase:
+    change-log: classpath:liquibase/changelog-master.xml
+    enabled: true
+
+  #kafka
+  kafka:
+    bootstrap-servers: localhost:9093
+    producer:
+      key-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+      properties:
+        schema.registry.url: http://localhost:8081
+    consumer:
+      group-id: sensor-data.group
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      key-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+    properties:
+      schema.registry.url: http://localhost:8081
+      specific.avro.reader: true
+
+iot.sensor.readings:
+  publish:
+    kafka:
+      enabled: true
+      partitionCount: 3
+
+# JWT
+jwt:
+    secret: a6EeqV0Sw8
+    expiration: 3600000 # 1 hr
+
+#Logging
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+    liquibase: DEBUG
+
+# Swagger
+springdoc.swagger-ui.path: /swagger-ui.html
+springdoc.api-docs.path: /v3/api-docs
+
+
+
+
+

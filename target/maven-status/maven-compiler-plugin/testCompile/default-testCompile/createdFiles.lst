@@ -1,0 +1,12 @@
+com/relay42/iot/sensor/data/IotSensorDataApplicationTests.class
+com/relay42/iot/sensor/data/controller/AuthenticationControllerTest.class
+com/relay42/iot/sensor/data/config/CustomTestSecurityConfig.class
+com/relay42/iot/sensor/data/controller/SensorControllerTest.class
+com/relay42/iot/sensor/data/security/CustomUserDetailsServiceTest.class
+com/relay42/iot/sensor/data/security/AuthenticateServiceTest.class
+com/relay42/iot/sensor/data/util/JwtTokenUtilTest.class
+com/relay42/iot/sensor/data/config/CustomUserDetails.class
+com/relay42/iot/sensor/data/security/JwtRequestFilterTest.class
+com/relay42/iot/sensor/data/service/SensorServiceImplTest.class
+com/relay42/iot/sensor/data/converter/AvroToEntityConverterTest.class
+com/relay42/iot/sensor/data/service/UserServiceImplTest.class
