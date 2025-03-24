@@ -25,6 +25,10 @@ public class IoTSensorEventConsumer {
     )
 
     public void sensorEventHandler(@Payload IoTSensorEventKafka message) {
+        if (message == null || message.getEventType() == null) {
+            log.warn("Received null or invalid message, ignoring...");
+            return;
+        }
         if (!IoTSensorEventTypeKafka.SENSOR_READINGS.equals(message.getEventType())) {
             return;
         }

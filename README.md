@@ -7,6 +7,7 @@ A REST API built with Spring Boot, Kafka, MySQL, JWT Authentication, and Avro Sc
 - **Spring Boot version**: 3.3.9
 - **Database**: MySQL (Dockerized)
 - **Kafka & Zookeeper**: Dockerized
+- **IDE**: IntelliJ IDEA
 
 ## Implementation:
 - REST API with **Spring Boot** and **Spring Data JPA**
@@ -105,3 +106,23 @@ You can now access the protected endpoints.
           "endTime": "2025-03-10T18:15:00"
   }
   ```
+
+
+## End Points Related to ** Sending Kafka Events **
+
+- send kafka message with **POST** request to  http://localhost:8080/api/v1/sensors/send
+  ```
+  {
+      "sensorId" : "THERMO_001" ,
+      "sensorType" : "THERMOSTAT",
+      "readingValue" : "22.5",
+      "unit" :  "C"  
+  }
+  ```
+ - This API sends a Kafka message containing sensor data.
+ - The message will be produced and consumed by Kafka.
+
+- Verify Data in Database 
+ -  Login into mysql in docker ``` docker exec -it mysql-container mysql -u root -p ```
+ -  USE your_database;
+ -  Select query based on your criteria.
